@@ -6,11 +6,17 @@ static int topbar = 1;                      /* -b  option; if 0, dmenu appears a
 static const char *fonts[] = {
 	"Cascadia Code:size=10"
 };
+
+static const char col_grey1[]       = "#2E3440";
+static const char col_grey2[]       = "#44475a";
+static const char col_text[]        = "#D8DEE9";
+static const char col_main[]        = "#ffd1dc";
+
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#D8DEE9", "#2E3440" },
-	[SchemeSel] = { "#2E3440", "#ffd1dc" },
+	[SchemeNorm] = { col_text, col_grey1 },
+	[SchemeSel] = { col_grey1, col_main },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
